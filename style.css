@@ -413,13 +413,17 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0
 
 
 /* Banner-home */
-section.container.banner{
+section.container-banner{
 display: flex;
 flex-direction: column;
-width: 1280px;
+}
+.banner-title{
+  font-weight: bold;
+  font-size: 55px;
+  text-align: center;
 }
 .section-p1 {
-padding: 10% 5% 0% 5%;
+padding: 0% 5% 0% 5%;
 margin: 10% 0 0 0 ;
 display: flex;
 flex-direction: row;
@@ -445,13 +449,13 @@ background-position: center;
 }
 
 .section-p1 .banner-box{
-width: 50%;
+width: 100%;
 height: 45vh;
 }
 
 .section-p2 .banner-box{
 width: 100%; 
-height: 45vh;
+height: 35vh;
 }
 
 .banner-box.atas-1{
@@ -1217,6 +1221,36 @@ section.footer h1{
     width: 90%;
     height: 70vh;
   }
+  .section-p1 .banner-box{
+    width: 100%;
+    height: 30vh;
+    }
+    
+    .section-p2 .banner-box{
+    width: 100%; 
+    height: 35vh;
+    }
+    
+    .section-p1 {
+      padding: 10% 5% 0% 5%;
+      margin: 10% 0 0 0 ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      }
+        
+    .section-p2 {
+      padding: 0% 5% 0% 5%;
+      margin: 5% 0 0 0 ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      }
+      
+
+
     /* top section */
 
   /* zoom section */
@@ -1283,6 +1317,7 @@ section.footer h1{
 .buy-now-btn{
   padding: 3% 25%;
   }
+  
   }
 @media only screen and (min-width: 1280px) {
   .contain {
