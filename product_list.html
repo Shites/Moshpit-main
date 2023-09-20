@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Moshpit - Produk</title>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b54559f667.js" crossorigin="anonymous"></script>
+    <!-- CSS Connector -->
     <link rel="stylesheet" href="./style.css">
-     <!-- JQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <!-- font awesome -->
-     <script src="https://kit.fontawesome.com/b54559f667.js" crossorigin="anonymous"></script>
-     <!-- CSS Connector -->
-     <link rel="stylesheet" href="./style.css">
-     <!-- icon -->
-     <link rel="icon" href="./Asset/Image/Logo-1.ico">
-     <!-- google font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link
-         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Roboto:wght@100;300&display=swap"
-         rel="stylesheet">
+    <!-- icon -->
+    <link rel="icon" href="./Asset/Image/Logo-1.ico">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <nav id="mainNav" class="navbar navbar-product">
-        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+    <header>
+        <a href="#" class="logo"><img src="./Asset/Image/Logo-nobg-1.png" alt=""></a>
 
-        <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
-            <span class="material-icons">
-                <div>&#9776;</div>
-            </span>
-        </button>
-        <img class="logo-nav" src="./Asset/Image/Logo-nobg-2.png" alt="">
-        <nav class="navbar-menu">
-            <button type="button" class="active"><a class="nav-link" href="index.html">Beranda</a></button>
-            <button type="button" class="active"><a class="nav-link" href="product_list.html">Produk</a></button>
-            <button type="button" class="active"><a class="nav-link" href="about.html">Tentang Kami</a></button>
-            <button type="button" class="active"><a class="nav-link" href="contact.html">Hubungi Kami</a></button>
-        </nav>
-    </nav>
+        <ul class="navmenu">
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="product_list.html">PRODUK</a></li>
+            <li><a href="about.html">TENTANG KAMI</a></li>
+        </ul>
 
+        <div class="nav-icon">
+            <a href="#"><i class='bx bxs-user'></i></a>
+            <a href="#"><i class='bx bx-cart'></i></a>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+      <!-- Floating chat -->
+      <button class="open-button" onclick="openForm()"><i class="fa-solid fa-comments"></i></button>
+
+      <div class="chat-popup" id="myForm">
+        <form action="" class="form-container">
+          <button type="button" class="btn cancel" onclick="closeForm()"><i class="fa-solid fa-x"></i></button>
+          <label for="msg"><b>Kirim pertanyaan melalui Customer service kami</b></label>
+          <textarea placeholder="Ketik Pesan" name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Kirim</button>
+          
+        </form>
+      </div>
+      
+  
+      <!-- Floating chat end -->
 
     <div class="header-produk">
         <h1>Clothing</h1>
@@ -48,7 +64,8 @@
         <h2 >T Shirt</h2>
 
         <div class="row-produk">
-            <div href="product.html" class="col-produk">
+            <a href=""> 
+            <div  class="col-produk">
                 <div class="img">
                    <img src="./Asset/Image/New-Tshirt-1-nobg 1.png" alt=""> 
                 </div>
@@ -59,20 +76,21 @@
                     </a>
                     <p>Rp. 97.000,00</p>
                 </div>
-            </div>
-
-            <div class="col-produk">
+            </div></a>
+           
+            <a href="product.html">
+                <div class="col-produk">
                 <div class="img">
                     <img src="./Asset/Image/New-Tshirt-2-nobg 1.png " alt=""> 
                  </div>
                  
                 <div class="text">
-                    <a href="product.html">
-                        <p><span class="nama">Moshpit Gray T Shirt</span></p> 
-                    </a>
+                    <p><span class="nama">Moshpit Gray T Shirt</span></p> 
                     <p>Rp. 97.000,00</p>
                 </div>
             </div>
+            </a>
+            
 
             <div class="col-produk">
                 <div class="img">
@@ -145,10 +163,12 @@
             </div>
 
             <div class="col-produk">
-                <img src="./Asset/Image/SweetShirt-3-nobg 1.png" alt="">
+                <div class="img"> 
+                    <img src="./Asset/Image/SweetShirt-3-nobg 1.png" alt="">
+                </div>
                 <div class="text">
                     <a href="">
-                        <p><span class="nama">Moshpit Cream T Shirt</span></p> 
+                        <p><span class="nama">Moshpit Cream Sweatshirt</span></p> 
                     </a>
                     <p>Rp. 149.000,00</p>
                 </div>
@@ -200,7 +220,9 @@
             </div>
 
             <div class="col-produk">
-                <img src="./Asset/Image/Hoodie-3-nobg 1.png" alt="">
+                <div class="img">
+                    <img src="./Asset/Image/Hoodie-3-nobg 1.png" alt="">
+                </div>
                 <div class="text">
                     <a href="">
                         <p><span class="nama">Moshpit Cream Hoodie</span></p> 
@@ -259,7 +281,9 @@
             </div>
 
             <div class="col-produk">
-                <img src="./Asset/Image/Mockup-Tothbag-10 1.png" alt="">
+                <div class="img">
+                     <img src="./Asset/Image/Mockup-Tothbag-10 1.png" alt="">
+                </div>
                 <div class="text">
                     <a href="">
                         <p><span class="nama">Moshpit Cream Totebags</span></p> 
@@ -272,56 +296,57 @@
         </div>
     </div>
 
- 
-
+    <!-- Footer -->
 
     <section class="footer">
         <div class="header">
-            <h1 class="child">Subscribe to our emails</h1>
+            <h1 class="child">Hubungi Email Kami</h1>
             <p class="child">Jadi yang pertama tau Produk terbaru kami dan penawaran spesial kami.</p>
-            <button class="child link" href="#">moshpit.clothing@gmail.com</button>
+            <button class="child-link" href="#">moshpit.clothing@gmail.com</button>
         </div>
-
+    
         <div class="contain">
             <div class="col">
-                <img class="footer-logo" src="img/Logo-nobg-2.png" alt="">
+                <img class="footer-logo" src="./Asset/Image/Logo-nobg-2sl.png" alt="">
             </div>
             <div class="col">
-                <h1>Products</h1>
+                <h1>PRODUK</h1>
                 <ul>
                     <li>T Shirt</li>
+                    <li>Sweetshirt</li>
                     <li>Hoodie</li>
                     <li>Tote Bag</li>
                 </ul>
             </div>
             <div class="col">
-                <h1>Company</h1>
+                <h1>PERUSAHAAN</h1>
                 <ul>
-                    <li>About Us</li>
-                    <li>Creator</li>
+                    <li>Tentang Kami</li>
+                    <li>Pembuat</li>
                 </ul>
             </div>
             <div class="col">
-                <h1>Contact Us</h1>
+                <h1>HUBUNGI KAMI</h1>
                 <ul>
                     <li>+62 812-1082-4480</li>
                 </ul>
             </div>
             <div class="col social">
-                <h1>Social</h1>
+                <h1>MEDIA</h1>
                 <ul>
-                    <i class="footer-icon fa-brands fa-square-facebook" style="color: #ffffff;"></i>
-                    <i class="footer-icon fa-brands fa-instagram" style="color: #fcfcfc;"></i>
-                    <i class="footer-icon fa-brands fa-x-twitter" style="color: #ffffff;"></i>
-                    <i class="footer-icon fa-brands fa-youtube" style="color: #ffffff;"></i>
+                    <a href=""><i class="footer-icon fa-brands fa-square-facebook" ></i></a>
+                    <a href=""><i class="footer-icon fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="footer-icon fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="footer-icon fa-brands fa-youtube"></i></a>
                 </ul>
             </div>
             <div class="clearfix"></div>
-
+    
         </div>
-        <p class="copyright">© 2023 Moshpit Website by our Founder</p>
+        <p class="copyright">© 2023 Moshpit Website By Founder</p>
     </section>
 
+    <!-- footer end -->
 
     <script src="./src/index.js"></script>
 </body>

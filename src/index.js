@@ -76,6 +76,98 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// floating chat
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+const slider = document.querySelector(".slider");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const slideIcons = document.querySelectorAll(".slide-icon");
+const numberOfSlides = slides.length;
+var slideNumber = 0;
+
+//image slider next button
+nextBtn.addEventListener("click", () => {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slideIcons.forEach((slideIcon) => {
+    slideIcon.classList.remove("active");
+  });
+
+  slideNumber++;
+
+  if(slideNumber > (numberOfSlides - 1)){
+    slideNumber = 0;
+  }
+
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
+});
+
+//image slider previous button
+prevBtn.addEventListener("click", () => {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slideIcons.forEach((slideIcon) => {
+    slideIcon.classList.remove("active");
+  });
+
+  slideNumber--;
+
+  if(slideNumber < 0){
+    slideNumber = numberOfSlides - 1;
+  }
+
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
+});
+
+//image slider autoplay
+var playSlider;
+
+var repeater = () => {
+  playSlider = setInterval(function(){
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+      slideIcon.classList.remove("active");
+    });
+
+    slideNumber++;
+
+    if(slideNumber > (numberOfSlides - 1)){
+      slideNumber = 0;
+    }
+
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+  }, 3000);
+}
+repeater();
+
+//stop the image slider autoplay on mouseover
+slider.addEventListener("mouseover", () => {
+  clearInterval(playSlider);
+});
+
+//start the image slider autoplay again on mouseout
+slider.addEventListener("mouseout", () => {
+  repeater();
+});
+  
+
 // Quantity Button
 jQuery(document).ready(($) => {
     $('.quantity').on('click', '.plus', function(e) {
@@ -94,32 +186,33 @@ jQuery(document).ready(($) => {
     });
 });
 
-const slider = document.querySelector('.row-produk');
+const slider_produk = document.querySelector('.row-produk');
     let isDown = false;
     let startX;
     let scrollLeft;
 
     slider.addEventListener('mousedown', (e) => {
       isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
+      slider_produk.classList.add('active');
+      startX = e.pageX - slider_produk.offsetLeft;
+      scrollLeft = slider_produk.scrollLeft;
     });
-    slider.addEventListener('mouseleave', () => {
+    slider_produk.addEventListener('mouseleave', () => {
       isDown = false;
       slider.classList.remove('active');
     });
-    slider.addEventListener('mouseup', () => {
+    slider_produk.addEventListener('mouseup', () => {
       isDown = false;
-      slider.classList.remove('active');
+      slider_produk.classList.remove('active');
     });
-    slider.addEventListener('mousemove', (e) => {
+    slider_produk.addEventListener('mousemove', (e) => {
       if(!isDown) return;
       e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
+      const x = e.pageX - slider_produk.offsetLeft;
       const walk = (x - startX) * 1; //scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
+      slider_produk.scrollLeft = scrollLeft - walk;
       console.log(walk);
     });
 
     
+  

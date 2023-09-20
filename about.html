@@ -1,172 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moshpit</title>
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/b54559f667.js" crossorigin="anonymous"></script>
-    <!-- CSS Connector -->
+    <title>Moshpit - Tentang Kami</title>
+     <!-- JQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/b54559f667.js" crossorigin="anonymous"></script>
+     <!-- CSS Connector -->
+     <link rel="stylesheet" href="./style.css">
+     <!-- icon -->
+     <link rel="icon" href="./Asset/Image/Logo-1.ico">
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
-    <!-- icon -->
-    <link rel="icon" href="./Asset/Image/Logo-1.ico">
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Roboto:wght@100;300&display=swap"
-        rel="stylesheet">
 </head>
-
 <body>
-    <!-- top section -->
-    <!-- navbar -->
-    <section class="top-sec" id="top">
-        <nav id="mainNav" class="navbar">
-            <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+    <header>
+        <a href="#" class="logo"><img src="./Asset/Image/Logo-nobg-1.png" alt=""></a>
 
-            <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
-                <span class="material-icons">
-                    <div>&#9776;</div>
-                </span>
-            </button>
-            <img class="logo-nav" src="./Asset/Image/Logo-nobg-2.png" alt="">
-            <nav class="navbar-menu">
-                <button type="button" class="active"><a class="nav-link" href="index.html">Beranda</a></button>
-                <button type="button" class="active"><a class="nav-link" href="product_list.html">Produk</a></button>
-                <button type="button" class="active"><a class="nav-link" href="about.html">Tentang Kami</a></button>
-                <button type="button" class="active"><a class="nav-link" href="contact.html">Hubungi Kami</a></button>
-            </nav>
-        </nav>
-</section>
-        <!--End Navbar-->
+        <ul class="navmenu">
+            <li><a href="index.html">BERANDA</a></li>
+            <li><a href="product_list.html">PRODUK</a></li>
+            <li><a href="about.html">TENTANG KAMI</a></li>
+        </ul>
 
-        <!-- landing-page -->
-        <div class="containerabt-top">
-            <div class="heading-top">
-                <div class="title-top">
-                <h1>Selamat datang di Moshpit</h1>
-                <p class="desc-abt">Brand pakaian dinamis dan penuh semangat yang mengedepankan individualitas dan ekspresi diri. Di Moshpit, kami tidak hanya menjual pakaian, kami menyusun koleksi karya seni yang dapat dikenakan yang mencerminkan identitas, kesimpelan, dan kreativitas Anda.</p>
-              
-              </div>
-            </div>
+        <div class="nav-icon">
+            <a href="#"><i class='bx bxs-user'></i></a>
+            <a href="#"><i class='bx bx-cart'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
+    </header>
     
+      <!-- Floating chat -->
+      <button class="open-button" onclick="openForm()"><i class="fa-solid fa-comments"></i></button>
 
-
-
-    <!-- about -->
-    <section class="container-top">
-
-       
-        <div class="card-column">
-            <div class="cardabt">
-            </div>
-            <div class="cardabt-2">
-            </div>
-          
-    </section>
-
-
-    <section class="container-abt">
-
-        <div class="title-top">
-            <h1>Pilihan yang Tepat</h1>
-            <p class="desc-abt">Kami berkomitmen untuk membuat barang. Produk yang kami buat terbuat dari bahan yang ramah lingkungkan. Ketika anda memilih Moshpit, kamu tidak hanya membuat sebuah gaya, tapi anda juga membuat pilihan untuk menjaga planet kita </p>
-           
-        </div>
-        <div class="cardabt-column">
-            <div class="cardcho">
-            </div>
-            <div class="cardcho-2">
-            </div>
-            <div class="cardcho-3">
-            </div>
-          
-    </section>
-
-
-    <section class="container-abt">
-
-        <div class="title-top">
-            <h1>Ikuti gerakan Moshpit</h1>
-            <p class="desc-abt">Mulai sebuah gerakan, ketika pakaian yang anda gunakan menjadi suara, seni dalam mengekspresikan diri kalian. Jelajahi koleksi kami, dan biarkan gaya berpakaian anda menjadi gerakan Moshpit.</p>
-           
-        </div>
-        <div class="card-column">
-            <div class="cardjoin">
-            </div>
-            <div class="cardjoin-2">
-            </div>
-          
-    </section>
-
-    
-    <section class="containerabt-bot">
-        <div class="title-top">
-            <h1 class="bottom-text">Coba gabungan dari gaya dan perasaan. Ini adalah Moshpit</h1>
-        </div>
+      <div class="chat-popup" id="myForm">
+        <form action="" class="form-container">
+          <button type="button" class="btn cancel" onclick="closeForm()"><i class="fa-solid fa-x"></i></button>
+          <label for="msg"><b>Kirim pertanyaan melalui Customer service kami</b></label>
+          <textarea placeholder="Ketik Pesan" name="msg" required></textarea>
       
-    </section>
-
-    <!-- about end -->
-
-
-    <section class="footer">
-       <div class="header">
-            <h1 class="child">Subscribe to our emails</h1>
-            <p class="child">Jadi yang pertama tau Produk terbaru kami dan penawaran spesial kami.</p>
-
-            <button class="child link" href="#">moshpit.clothing@gmail.com</button>
-       </div>
-
-       <div class="contain">
-        <div class="col">
-         <img class="footer-logo" src="./Asset/Image/Logo-nobg-2sl.png" alt="">
-        </div>
-        <div class="col">
-          <h1>Products</h1>
-          <ul>
-            <li>T Shirt</li>
-            <li>Hoodie</li>
-            <li>Tote Bag</li>
-          </ul>
-        </div>
-        <div class="col">
-          <h1>Company</h1>
-          <ul>
-            <li>About Us</li>
-            <li>Creator</li>
-          </ul>
-        </div>
-        <div class="col">
-          <h1>Contact Us</h1>
-          <ul>
-            <li>+62 812-1082-4480</li>
-          </ul>
-        </div>
-        <div class="col social">
-          <h1>Social</h1>
-          <ul>
-            <i class="footer-icon fa-brands fa-square-facebook" style="color: #ffffff;"></i>
-            <i class="footer-icon fa-brands fa-instagram" style="color: #fcfcfc;"></i>
-            <i class="footer-icon fa-brands fa-x-twitter" style="color: #ffffff;"></i>
-            <i class="footer-icon fa-brands fa-youtube" style="color: #ffffff;"></i>
-          </ul>
-        </div>
-      <div class="clearfix"></div>
-      
+          <button type="submit" class="btn">Kirim</button>
+          
+        </form>
       </div>
-      <p class="copyright">© 2023 Moshpit Website by our Founder</p>
+      
+  
+      <!-- Floating chat end -->
+
+    <div class="container-about">
+        <div class="row-about">
+            <div class="col-left">
+                <div class="text">
+
+                    <div class="header">
+                        <p>Pilihan Yang <span>Tepat</span></p>
+                    </div>
+                    <div class="child">
+                        <p>Kami berkomitmen untuk membuat barang. Produk yang kami buat terbuat dari bahan yang ramah lingkungkan. Ketika anda memilih <span>Moshpit</span>, kamu tidak hanya membuat sebuah gaya, tapi anda juga membuat pilihan untuk menjaga planet kita.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="buat-gambar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-card-about">
+        <div class="card-about">
+            <div class="card-1 card"></div>
+            <div class="card-2 card"></div>
+            <div class="card-3 card"></div>
+        </div>
+    </div>
+
+    <div class="container-about bawah ">
+        <div class="row-about">
+            <div class="col-left">
+                <div class="text">
+
+                    <div class="header">
+                        <p>Ikuti gerakan <span>Moshpit</span></p>
+                    </div>
+                    <div class="child">
+                        <p class="left-text">
+                            Mulai sebuah gerakan, ketika pakaian yang anda gunakan menjadi suara, seni dalam mengekspresikan diri kalian. Jelajahi koleksi kami, dan biarkan gaya berpakaian anda menjadi gerakan <span>Moshpit</span>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="buat-gambar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-card-about bawah">
+        <div class="card-about">
+            <div class="card-4 card"></div>
+            <div class="card-5 card"></div>
+            <div class="card-6 card"></div>
+        </div>
+    </div>
+
+    <!-- SLIDER CEO -->
+    <div class="slider-container">
+        
+        <div class="slider">
+          <div class="slide active">
+            <div class="img">
+                <img src="Asset/Image/ceo-alif.png" alt="">
+            </div>
+            <div class="info-container">
+                <div class="info">
+                  <h2>Ananda Alif Raditya <span>UI/UX, Developer</span></h2>
+                  <p>"Rtx ga membuat codingan kamu makin banyak."</p>
+                  <p style="text-align: end; margin-right: 40px;">~ Alif 2023</p>
+                </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="img">
+                <img src="Asset/Image/batitCeo.png" alt="">
+            </div>
+            <div class="info">
+              <h2>Bagus Tito Wijoyo <span>Developer</span></h2>
+              <p>"Bang mau masuk UGM"</p>
+              <p style="text-align: end; margin-right: 40px;">~ Tito 2023</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="img">
+                <img src="Asset/Image/mos.png" alt="">
+            </div>
+            <div class="info">
+              <h2>Amos Dompak Christian <span>Developer</span></h2>
+              <p>"Semoga SNBP masuk Udayana amin amin Tuhan Yesus"</p>
+              <p style="text-align: end; margin-right: 40px;">~ Amos 2023</p>
+            </div>
+          </div>
+          <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"></i>
+            <i class="fas fa-chevron-right next-btn"></i>
+          </div>
+          <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+          </div>
+        </div>
+     </div>
+
+     <section class="footer">
+        <div class="header">
+            <h1 class="child">Hubungi Email Kami</h1>
+            <p class="child">Jadi yang pertama tau Produk terbaru kami dan penawaran spesial kami.</p>
+            <button class="child-link" href="#">moshpit.clothing@gmail.com</button>
+        </div>
+    
+        <div class="contain">
+            <div class="col">
+                <img class="footer-logo" src="./Asset/Image/Logo-nobg-2sl.png" alt="">
+            </div>
+            <div class="col">
+                <h1>PRODUK</h1>
+                <ul>
+                    <li>T Shirt</li>
+                    <li>Sweetshirt</li>
+                    <li>Hoodie</li>
+                    <li>Tote Bag</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>PERUSAHAAN</h1>
+                <ul>
+                    <li>Tentang Kami</li>
+                    <li>Pembuat</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>HUBUNGI KAMI</h1>
+                <ul>
+                    <li>+62 812-1082-4480</li>
+                </ul>
+            </div>
+            <div class="col social">
+                <h1>MEDIA</h1>
+                <ul>
+                    <a href=""><i class="footer-icon fa-brands fa-square-facebook" ></i></a>
+                    <a href=""><i class="footer-icon fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="footer-icon fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="footer-icon fa-brands fa-youtube"></i></a>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+    
+        </div>
+        <p class="copyright">© 2023 Moshpit Website By Founder</p>
     </section>
 
-
-
-
-    <script src="./src/index.js"></script>
+<script src="./src/index.js"></script>
 </body>
-
 </html>
