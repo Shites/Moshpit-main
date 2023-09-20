@@ -1916,7 +1916,7 @@ section.footer h1{
     display: flex;
     align-items: center;
     justify-content: left;
-    margin-left: 8.5%;
+    margin-left: 5%;
   }
 .product-div-right{
     text-align: left;
@@ -1978,6 +1978,7 @@ section.footer h1{
   }
 
   @media (min-width:380px){
+
     
     .img-container img{
       width: 250px;
@@ -2032,6 +2033,10 @@ section.footer h1{
   .contain {
     width: 1200px;
     margin: 0 auto;
+  }
+
+  .img-container img{
+    width: 500px;
   }
 }
 @media only screen and (max-width: 1139px) {
@@ -2154,9 +2159,18 @@ section.footer .header .link {
 }
 
 @media(max-width: 350px) {
+
+  .hover-container div{
+    width: 35px;
+  }
   .card-home-btn {
     left: 30%;
   }
+
+  .img-container img{
+    width: 200px;
+  }
+
   
   .poll-title {
     font-size: 18px;
