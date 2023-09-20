@@ -1977,6 +1977,12 @@ section.footer h1{
 }
   }
 
+  @media (min-width:380px){
+    .poll-home-btn{
+      width: 90px;
+    }
+  }
+
  @media (max-width:500px){
   .zoom .box{
     left: 10%;
@@ -2101,9 +2107,9 @@ section.footer h1{
   }
 
   .poll-home-btn {
-    width: 120px;
+    width: 110px;
     padding: 10px 0;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .btn-groups {
@@ -2137,7 +2143,7 @@ section.footer .header .link {
 }
 }
 
-@media only screen and (max-width: 400px) {
+@media(max-width: 350px) {
   .card-home-btn {
     left: 30%;
   }
@@ -2151,7 +2157,8 @@ section.footer .header .link {
   }
 
   .poll-home-btn {
-    width: 113px;
+    width: 90px;
+    font-size: 11px;
     padding: 10px 0;
   }
 }
