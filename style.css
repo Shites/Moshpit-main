@@ -1637,7 +1637,6 @@ border: none;
 
 @media screen and (max-width: 400px){
   .btn-groups button{
-      width: 100%;
       margin-bottom: 10px;
   }
 }
@@ -1778,10 +1777,15 @@ section.footer h1{
   }
 }
 
+@media(max-width:380px){
+ 
+}
+
 @media(max-width:400px){
   .zoom .box{
     width: 90%;
   }
+  .
 }
 
 @media(max-width:750px){
@@ -1801,21 +1805,25 @@ section.footer h1{
     margin-top: 10%;
     width: 90%;
     height: 70vh;
+    background-position: 50%;
   }
   .card-2{
     margin-top: 5%;
     width: 90%;
     height: 70vh;
+    background-position: 50%;
   }
   .card-3{
     margin-top: 5%;
     width: 90%;
     height: 70vh;
+    background-position: 50%;
   }
   .card-4{
     margin-top: 5%;
     width: 90%;
     height: 70vh;
+    background-position: 50%;
   }
     /* top section */
 
@@ -1937,8 +1945,11 @@ section.footer h1{
    position: relative;
    left: 50px;
   }
+.add-cart-btn{
+  margin-left: 5%;
+}
 .buy-now-btn{
-  padding: 3% 25%;
+  padding: 3% 20%;
   }
 
 
@@ -1967,7 +1978,7 @@ section.footer h1{
 }
   }
 
-@media (max-width: 900px) {
+@media (min-width: 700px) {
   .open-button{
     width: 8%;
     height: 5%;
@@ -1980,7 +1991,7 @@ section.footer h1{
     width: 80%;
     left: 10%;
     bottom: 0%;
-    top: 10%;
+    top: 15%;
     background-position: 10% 70%;
   }
   
