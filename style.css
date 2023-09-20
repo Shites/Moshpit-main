@@ -1908,7 +1908,7 @@ section.footer h1{
   width: 400px;
 }
 .hover-container div img{
-  width: 71px;
+  width: 7px;
 }
 .main-wrapper{
     text-align: left;
@@ -1978,7 +1978,13 @@ section.footer h1{
 }
   }
 
-@media (min-width: 700px) {
+ @media (max-width:500px){
+  .zoom .box{
+    left: 10%;
+  }
+ } 
+
+@media (max-width: 700px) {
   .open-button{
     width: 8%;
     height: 5%;
